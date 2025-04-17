@@ -23,7 +23,7 @@ class LinkToChildrenAction extends Action
     public function getUrl(): ?string
     {
 
-        //$parent = $this->getRecord()->{$this->getRecord()->getKeyName()};
+        // $parent = $this->getRecord()->{$this->getRecord()->getKeyName()};
         $parent = $this->getRecord()->getKey();
 
         $params = [Str::camel(Str::singular($this->childResource::getParent()::getSlug())) => $parent];
